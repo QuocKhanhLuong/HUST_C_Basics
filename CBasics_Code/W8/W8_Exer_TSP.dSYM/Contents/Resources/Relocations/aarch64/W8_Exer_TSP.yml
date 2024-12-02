@@ -1,0 +1,16 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/W8/W8_Exer_TSP'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _Try, symObjAddr: 0x0, symBinAddr: 0x100003AB4, symSize: 0x264 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x100011DDC, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _d, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offsetInCU: 0x90, offset: 0x90, size: 0x8, addend: 0x0, symName: _x, symBinAddr: 0x100011DE0, symSize: 0x0 }
+  - { offsetInCU: 0xB1, offset: 0xB1, size: 0x8, addend: 0x0, symName: _mark, symBinAddr: 0x100011C4C, symSize: 0x0 }
+  - { offsetInCU: 0xC6, offset: 0xC6, size: 0x8, addend: 0x0, symName: _f, symBinAddr: 0x100011C44, symSize: 0x0 }
+  - { offsetInCU: 0xDB, offset: 0xDB, size: 0x8, addend: 0x0, symName: _f_min, symBinAddr: 0x100011C48, symSize: 0x0 }
+  - { offsetInCU: 0xF0, offset: 0xF0, size: 0x8, addend: 0x0, symName: _Cm, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0xF9, offset: 0xF9, size: 0x8, addend: 0x0, symName: _Try, symObjAddr: 0x0, symBinAddr: 0x100003AB4, symSize: 0x264 }
+  - { offsetInCU: 0x139, offset: 0x139, size: 0x8, addend: 0x0, symName: _input, symObjAddr: 0x264, symBinAddr: 0x100003D18, symSize: 0x17C }
+  - { offsetInCU: 0x187, offset: 0x187, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x3E0, symBinAddr: 0x100003E94, symSize: 0xF8 }
+...

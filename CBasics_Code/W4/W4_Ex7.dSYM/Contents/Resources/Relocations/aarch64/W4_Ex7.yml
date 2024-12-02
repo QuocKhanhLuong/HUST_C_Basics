@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/W4/W4_Ex7'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _mycp, symObjAddr: 0x0, symBinAddr: 0x100003D64, symSize: 0x58 }
+  - { offsetInCU: 0x49, offset: 0x49, size: 0x8, addend: 0x0, symName: _mycp, symObjAddr: 0x0, symBinAddr: 0x100003D64, symSize: 0x58 }
+  - { offsetInCU: 0x89, offset: 0x89, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x58, symBinAddr: 0x100003DBC, symSize: 0x144 }
+...

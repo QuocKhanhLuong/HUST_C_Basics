@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/C Basics/W4_Ex3'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _capitalize, symObjAddr: 0x0, symBinAddr: 0x100003CA8, symSize: 0x30 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _articles, symObjAddr: 0x2B0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x78, offset: 0x78, size: 0x8, addend: 0x0, symName: _nouns, symObjAddr: 0x2D8, symBinAddr: 0x100008028, symSize: 0x0 }
+  - { offsetInCU: 0x8D, offset: 0x8D, size: 0x8, addend: 0x0, symName: _verbs, symObjAddr: 0x300, symBinAddr: 0x100008050, symSize: 0x0 }
+  - { offsetInCU: 0xA2, offset: 0xA2, size: 0x8, addend: 0x0, symName: _prepositions, symObjAddr: 0x328, symBinAddr: 0x100008078, symSize: 0x0 }
+  - { offsetInCU: 0xAB, offset: 0xAB, size: 0x8, addend: 0x0, symName: _capitalize, symObjAddr: 0x0, symBinAddr: 0x100003CA8, symSize: 0x30 }
+  - { offsetInCU: 0xCF, offset: 0xCF, size: 0x8, addend: 0x0, symName: _generateSentences, symObjAddr: 0x30, symBinAddr: 0x100003CD8, symSize: 0x150 }
+  - { offsetInCU: 0xF3, offset: 0xF3, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x180, symBinAddr: 0x100003E28, symSize: 0xB4 }
+...

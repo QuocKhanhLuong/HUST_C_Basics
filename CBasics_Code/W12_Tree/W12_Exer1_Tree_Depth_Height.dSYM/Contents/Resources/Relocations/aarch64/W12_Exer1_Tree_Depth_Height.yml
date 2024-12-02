@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/W12_Tree/W12_Exer1_Tree_Depth_Height'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003950, symSize: 0x50 }
+  - { offsetInCU: 0x96, offset: 0x96, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003950, symSize: 0x50 }
+  - { offsetInCU: 0xCC, offset: 0xCC, size: 0x8, addend: 0x0, symName: _find, symObjAddr: 0x50, symBinAddr: 0x1000039A0, symSize: 0xD4 }
+  - { offsetInCU: 0x12C, offset: 0x12C, size: 0x8, addend: 0x0, symName: _insert, symObjAddr: 0x124, symBinAddr: 0x100003A74, symSize: 0xE0 }
+  - { offsetInCU: 0x196, offset: 0x196, size: 0x8, addend: 0x0, symName: _depth, symObjAddr: 0x204, symBinAddr: 0x100003B54, symSize: 0x54 }
+  - { offsetInCU: 0x1DA, offset: 0x1DA, size: 0x8, addend: 0x0, symName: _height, symObjAddr: 0x258, symBinAddr: 0x100003BA8, symSize: 0xB8 }
+  - { offsetInCU: 0x248, offset: 0x248, size: 0x8, addend: 0x0, symName: _freeTree, symObjAddr: 0x310, symBinAddr: 0x100003C60, symSize: 0x84 }
+  - { offsetInCU: 0x296, offset: 0x296, size: 0x8, addend: 0x0, symName: _solve, symObjAddr: 0x394, symBinAddr: 0x100003CE4, symSize: 0x22C }
+  - { offsetInCU: 0x373, offset: 0x373, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x5C0, symBinAddr: 0x100003F10, symSize: 0x18 }
+...

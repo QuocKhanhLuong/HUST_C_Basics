@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/C Basics/W4_Ex1'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _split, symObjAddr: 0x0, symBinAddr: 0x100003E54, symSize: 0x4C }
+  - { offsetInCU: 0x48, offset: 0x48, size: 0x8, addend: 0x0, symName: _split, symObjAddr: 0x0, symBinAddr: 0x100003E54, symSize: 0x4C }
+  - { offsetInCU: 0x88, offset: 0x88, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x4C, symBinAddr: 0x100003EA0, symSize: 0x90 }
+...

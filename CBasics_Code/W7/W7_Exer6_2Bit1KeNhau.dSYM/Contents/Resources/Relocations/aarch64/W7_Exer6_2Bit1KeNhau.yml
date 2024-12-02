@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/W7/W7_Exer6_2Bit1KeNhau'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _check, symObjAddr: 0x0, symBinAddr: 0x100003D88, symSize: 0x68 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _X, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x75, offset: 0x75, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x10000807C, symSize: 0x0 }
+  - { offsetInCU: 0x7E, offset: 0x7E, size: 0x8, addend: 0x0, symName: _check, symObjAddr: 0x0, symBinAddr: 0x100003D88, symSize: 0x68 }
+  - { offsetInCU: 0xB4, offset: 0xB4, size: 0x8, addend: 0x0, symName: _solution, symObjAddr: 0x68, symBinAddr: 0x100003DF0, symSize: 0x8C }
+  - { offsetInCU: 0xE6, offset: 0xE6, size: 0x8, addend: 0x0, symName: _Try, symObjAddr: 0xF4, symBinAddr: 0x100003E7C, symSize: 0xB8 }
+  - { offsetInCU: 0x126, offset: 0x126, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1AC, symBinAddr: 0x100003F34, symSize: 0x4C }
+...

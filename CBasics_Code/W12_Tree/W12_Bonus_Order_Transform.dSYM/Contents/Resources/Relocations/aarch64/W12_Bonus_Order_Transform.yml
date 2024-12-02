@@ -1,0 +1,16 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/W12_Tree/W12_Bonus_Order_Transform'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003720, symSize: 0x40 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _top, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x100003720, symSize: 0x40 }
+  - { offsetInCU: 0xC9, offset: 0xC9, size: 0x8, addend: 0x0, symName: _initStack, symObjAddr: 0x40, symBinAddr: 0x100003760, symSize: 0x10 }
+  - { offsetInCU: 0xDE, offset: 0xDE, size: 0x8, addend: 0x0, symName: _stackEmpty, symObjAddr: 0x50, symBinAddr: 0x100003770, symSize: 0x1C }
+  - { offsetInCU: 0xF7, offset: 0xF7, size: 0x8, addend: 0x0, symName: _pop, symObjAddr: 0x6C, symBinAddr: 0x10000378C, symSize: 0x80 }
+  - { offsetInCU: 0x12D, offset: 0x12D, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0xEC, symBinAddr: 0x10000380C, symSize: 0x44 }
+  - { offsetInCU: 0x15F, offset: 0x15F, size: 0x8, addend: 0x0, symName: _uutien, symObjAddr: 0x130, symBinAddr: 0x100003850, symSize: 0xA0 }
+  - { offsetInCU: 0x187, offset: 0x187, size: 0x8, addend: 0x0, symName: _infixToPrefix, symObjAddr: 0x1D0, symBinAddr: 0x1000038F0, symSize: 0x314 }
+  - { offsetInCU: 0x1FF, offset: 0x1FF, size: 0x8, addend: 0x0, symName: _infixToPostfix, symObjAddr: 0x4E4, symBinAddr: 0x100003C04, symSize: 0x26C }
+  - { offsetInCU: 0x25B, offset: 0x25B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x750, symBinAddr: 0x100003E70, symSize: 0xC8 }
+...

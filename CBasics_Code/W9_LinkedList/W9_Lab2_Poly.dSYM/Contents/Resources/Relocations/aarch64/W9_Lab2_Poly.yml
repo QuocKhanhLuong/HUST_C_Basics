@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/W9_LinkedList/W9_Lab2_Poly'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x10000386C, symSize: 0x50 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _P, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0xAC, offset: 0xAC, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x10000386C, symSize: 0x50 }
+  - { offsetInCU: 0xF0, offset: 0xF0, size: 0x8, addend: 0x0, symName: _printPoly, symObjAddr: 0x50, symBinAddr: 0x1000038BC, symSize: 0x8C }
+  - { offsetInCU: 0x130, offset: 0x130, size: 0x8, addend: 0x0, symName: _addTerm, symObjAddr: 0xDC, symBinAddr: 0x100003948, symSize: 0xF8 }
+  - { offsetInCU: 0x190, offset: 0x190, size: 0x8, addend: 0x0, symName: _processAddTerm, symObjAddr: 0x1D4, symBinAddr: 0x100003A40, symSize: 0x50 }
+  - { offsetInCU: 0x1D0, offset: 0x1D0, size: 0x8, addend: 0x0, symName: _addPoly, symObjAddr: 0x224, symBinAddr: 0x100003A90, symSize: 0x104 }
+  - { offsetInCU: 0x276, offset: 0x276, size: 0x8, addend: 0x0, symName: _processAddPoly, symObjAddr: 0x328, symBinAddr: 0x100003B94, symSize: 0x50 }
+  - { offsetInCU: 0x2B6, offset: 0x2B6, size: 0x8, addend: 0x0, symName: _processEvaluatePoly, symObjAddr: 0x378, symBinAddr: 0x100003BE4, symSize: 0xE0 }
+  - { offsetInCU: 0x312, offset: 0x312, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x458, symBinAddr: 0x100003CC4, symSize: 0x250 }
+...
