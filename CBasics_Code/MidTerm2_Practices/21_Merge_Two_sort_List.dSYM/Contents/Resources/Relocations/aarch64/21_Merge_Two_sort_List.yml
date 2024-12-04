@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/MidTerm2_Practices/21_Merge_Two_sort_List'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _mergeTwoLists, symObjAddr: 0x0, symBinAddr: 0x100003CB8, symSize: 0x118 }
+  - { offsetInCU: 0x6E, offset: 0x6E, size: 0x8, addend: 0x0, symName: _mergeTwoLists, symObjAddr: 0x0, symBinAddr: 0x100003CB8, symSize: 0x118 }
+  - { offsetInCU: 0xC0, offset: 0xC0, size: 0x8, addend: 0x0, symName: _printList, symObjAddr: 0x118, symBinAddr: 0x100003DD0, symSize: 0x78 }
+  - { offsetInCU: 0xF2, offset: 0xF2, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x190, symBinAddr: 0x100003E48, symSize: 0x140 }
+...
