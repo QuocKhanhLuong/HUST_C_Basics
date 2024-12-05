@@ -77,14 +77,12 @@ INFO visit(Node *r){
 
 void freeTree(Node *r){
     if(r == NULL) return;
-    Node* p = r->left;
-    while(p != NULL){
-        Node* np = p->right;
-        freeTree(p);
-        p = np;
-    }
+    Node* p = r;
+    freeTree(p->right);
+    freeTree(p->left);
     free(r);
 }
+
 void solve(){
     for(int i = 0; i < N; i++){
         nodes[i] = NULL;
