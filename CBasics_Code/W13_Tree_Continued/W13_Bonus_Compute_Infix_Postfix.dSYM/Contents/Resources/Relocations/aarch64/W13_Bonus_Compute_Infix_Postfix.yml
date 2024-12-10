@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/W13_Tree_Continued/W13_Bonus_Compute_Infix_Postfix'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x1000039C4, symSize: 0x40 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _top, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _makeNode, symObjAddr: 0x0, symBinAddr: 0x1000039C4, symSize: 0x40 }
+  - { offsetInCU: 0xC9, offset: 0xC9, size: 0x8, addend: 0x0, symName: _initStack, symObjAddr: 0x40, symBinAddr: 0x100003A04, symSize: 0x10 }
+  - { offsetInCU: 0xDE, offset: 0xDE, size: 0x8, addend: 0x0, symName: _stackEmpty, symObjAddr: 0x50, symBinAddr: 0x100003A14, symSize: 0x1C }
+  - { offsetInCU: 0xF7, offset: 0xF7, size: 0x8, addend: 0x0, symName: _pop, symObjAddr: 0x6C, symBinAddr: 0x100003A30, symSize: 0x80 }
+  - { offsetInCU: 0x12D, offset: 0x12D, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0xEC, symBinAddr: 0x100003AB0, symSize: 0x44 }
+  - { offsetInCU: 0x15F, offset: 0x15F, size: 0x8, addend: 0x0, symName: _computePrefix, symObjAddr: 0x130, symBinAddr: 0x100003AF4, symSize: 0x168 }
+  - { offsetInCU: 0x1F3, offset: 0x1F3, size: 0x8, addend: 0x0, symName: _computePostfix, symObjAddr: 0x2B0, symBinAddr: 0x100003C74, symSize: 0x164 }
+  - { offsetInCU: 0x287, offset: 0x287, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x42C, symBinAddr: 0x100003DF0, symSize: 0xF0 }
+...
