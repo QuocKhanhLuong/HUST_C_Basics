@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/MidTerm2_Practices/Bonus_Tree_File_Control'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _CreateNode, symObjAddr: 0x0, symBinAddr: 0x10000384C, symSize: 0x64 }
+  - { offsetInCU: 0xAE, offset: 0xAE, size: 0x8, addend: 0x0, symName: _CreateNode, symObjAddr: 0x0, symBinAddr: 0x10000384C, symSize: 0x64 }
+  - { offsetInCU: 0xF2, offset: 0xF2, size: 0x8, addend: 0x0, symName: _Search, symObjAddr: 0x64, symBinAddr: 0x1000038B0, symSize: 0xD4 }
+  - { offsetInCU: 0x152, offset: 0x152, size: 0x8, addend: 0x0, symName: _InsertChild, symObjAddr: 0x138, symBinAddr: 0x100003984, symSize: 0xE4 }
+  - { offsetInCU: 0x1BC, offset: 0x1BC, size: 0x8, addend: 0x0, symName: _PrintTree, symObjAddr: 0x21C, symBinAddr: 0x100003A68, symSize: 0xD4 }
+  - { offsetInCU: 0x218, offset: 0x218, size: 0x8, addend: 0x0, symName: _CountFiles, symObjAddr: 0x2F0, symBinAddr: 0x100003B3C, symSize: 0xBC }
+  - { offsetInCU: 0x25C, offset: 0x25C, size: 0x8, addend: 0x0, symName: _FreeTree, symObjAddr: 0x3AC, symBinAddr: 0x100003BF8, symSize: 0x84 }
+  - { offsetInCU: 0x2AA, offset: 0x2AA, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x430, symBinAddr: 0x100003C7C, symSize: 0x278 }
+...
