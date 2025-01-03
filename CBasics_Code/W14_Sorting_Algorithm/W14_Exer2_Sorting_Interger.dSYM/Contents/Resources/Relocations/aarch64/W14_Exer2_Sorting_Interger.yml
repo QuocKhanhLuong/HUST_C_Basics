@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/W14_Sorting_Algorithm/W14_Exer2_Sorting_Interger'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _swap, symObjAddr: 0x0, symBinAddr: 0x100003C34, symSize: 0x44 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _a, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x78, offset: 0x78, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x1003D8904, symSize: 0x0 }
+  - { offsetInCU: 0x81, offset: 0x81, size: 0x8, addend: 0x0, symName: _swap, symObjAddr: 0x0, symBinAddr: 0x100003C34, symSize: 0x44 }
+  - { offsetInCU: 0xC1, offset: 0xC1, size: 0x8, addend: 0x0, symName: _heapify, symObjAddr: 0x44, symBinAddr: 0x100003C78, symSize: 0x118 }
+  - { offsetInCU: 0x11D, offset: 0x11D, size: 0x8, addend: 0x0, symName: _buildHeap, symObjAddr: 0x15C, symBinAddr: 0x100003D90, symSize: 0x70 }
+  - { offsetInCU: 0x14F, offset: 0x14F, size: 0x8, addend: 0x0, symName: _heapSort, symObjAddr: 0x1CC, symBinAddr: 0x100003E00, symSize: 0x78 }
+  - { offsetInCU: 0x181, offset: 0x181, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x244, symBinAddr: 0x100003E78, symSize: 0x108 }
+...
