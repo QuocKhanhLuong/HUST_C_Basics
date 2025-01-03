@@ -12,7 +12,8 @@ Node* tail;
 
 Node* makeNode(int x){
     Node* p = (Node*)malloc(sizeof(Node));
-    p->value = x; p->next = NULL;
+    p->value = x; 
+    p->next = NULL;
     return p;
 }
 
