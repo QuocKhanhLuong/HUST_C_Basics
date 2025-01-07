@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/quockhanhluong/Documents/CBasics/CBasics_Code/Final_Practices/Test02/Exer02'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _normalize, symObjAddr: 0x0, symBinAddr: 0x1000038B8, symSize: 0x1BC }
+  - { offsetInCU: 0x81, offset: 0x81, size: 0x8, addend: 0x0, symName: _normalize, symObjAddr: 0x0, symBinAddr: 0x1000038B8, symSize: 0x1BC }
+  - { offsetInCU: 0xCF, offset: 0xCF, size: 0x8, addend: 0x0, symName: _splitAndCountWords, symObjAddr: 0x1BC, symBinAddr: 0x100003A74, symSize: 0x174 }
+  - { offsetInCU: 0x159, offset: 0x159, size: 0x8, addend: 0x0, symName: _compareWords, symObjAddr: 0x330, symBinAddr: 0x100003BE8, symSize: 0x2C }
+  - { offsetInCU: 0x18F, offset: 0x18F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x35C, symBinAddr: 0x100003C14, symSize: 0x294 }
+...
