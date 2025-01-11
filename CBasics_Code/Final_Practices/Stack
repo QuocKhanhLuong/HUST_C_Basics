@@ -1,0 +1,106 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define MAX_BOOKS 100
+typedef struct {    // Cấu trúc dữ liệu quyển sách
+    char code[11];
+    char title[51];
+    char author[31];
+} Book;
+typedef struct {    // Stack quản lý sách
+    Book books[MAX_BOOKS];
+    int top;
+} Stack;
+void CreateStack(Stack *stack) {
+    stack->top = -1;
+}
+int IsEmpty(Stack *stack) { // Kiểm tra stack rỗng
+    return stack->top == -1;
+}
+int IsFull(Stack *stack) {  // Kiểm tra stack đã đầy
+    return stack->top == MAX_BOOKS - 1;
+}
+void Push(Stack *stack, const char *code, const char *title, const char *author) {  // Thêm sách vào stack
+    if (IsFull(stack)) {
+        printf("Stack overflow.\n");
+        return;
+    }
+    for (int i = 0; i <= stack->top; i++) {
+        if (strcmp(stack->books[i].code, code) == 0) {
+            printf("Duplicate book code.\n");
+            return;
+        }
+    }
+    stack->top++;
+    strcpy(stack->books[stack->top].code, code);
+    strcpy(stack->books[stack->top].title, title);
+    strcpy(stack->books[stack->top].author, author);
+}
+// Loại bỏ sách ở đỉnh stack
+void Pop(Stack *stack) {    // Loại bỏ sách ở đỉnh stack
+    if (IsEmpty(stack)) {
+        printf("Stack underflow.\n");
+        return;
+    }
+    stack->top--;
+}
+void Peek(Stack *stack) {   // Xem thông tin sách ở đỉnh stack
+    if (IsEmpty(stack)) {
+        printf("EMPTY\n");
+        return;
+    }
+    printf("%s %s %s\n", stack->books[stack->top].code, stack->books[stack->top].title, stack->books[stack->top].author);
+}
+void Print(Stack *stack) {  // In toàn bộ stack
+    if (IsEmpty(stack)) {
+        printf("EMPTY\n");
+        return;
+    }
+    for (int i = stack->top; i >= 0; i--) {
+        printf("%s %s %s\n", stack->books[i].code, stack->books[i].title, stack->books[i].author);
+    }
+}
+int Size(Stack *stack) {    // Trả về kích thước stack
+    return stack->top + 1;
+}
+void Clear(Stack *stack) {  // Xóa toàn bộ stack
+    stack->top = -1;
+}
+void findBook(const char *code, Stack *stack) { // Tìm sách theo mã
+    for (int i = stack->top; i >= 0; i--) {
+        if (strcmp(stack->books[i].code, code) == 0) {
+            printf("%s %s %s\n", stack->books[i].code, stack->books[i].title, stack->books[i].author);
+            return;
+        }
+    }
+    printf("NOT FOUND\n");
+}
+int main() {
+    Stack stack;
+    CreateStack(&stack);
+    char command[100];
+    while (1) {
+        fgets(command, sizeof(command), stdin);
+        command[strcspn(command, "\n")] = '\0';
+        if (strcmp(command, "Terminate") == 0) {
+            break;
+        } else if (strncmp(command, "Push", 4) == 0) {
+            char code[11], title[51], author[31];
+            sscanf(command + 5, "%s %s %s", code, title, author);
+            Push(&stack, code, title, author);
+        } else if (strcmp(command, "Pop") == 0) {
+            Pop(&stack);
+        } else if (strcmp(command, "Peek") == 0) {
+            Peek(&stack);
+        } else if (strcmp(command, "Print") == 0) {
+            Print(&stack);
+        } else if (strcmp(command, "IsEmpty") == 0) {
+            printf(IsEmpty(&stack) ? "YES\n" : "NO\n");
+        } else if (strcmp(command, "Size") == 0) {
+            printf("%d\n", Size(&stack));
+        } else {
+            printf("Invalid command.\n");
+        }
+    }
+    return 0;
+}

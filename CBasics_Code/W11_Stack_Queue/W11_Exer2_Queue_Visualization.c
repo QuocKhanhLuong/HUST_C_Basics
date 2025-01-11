@@ -25,6 +25,7 @@ void initQueue(){
 int queueEmpty(){
     return head == NULL && tail == NULL;
 }
+
 void push(int v) {
     Node* p = makeNode(v);
     if(queueEmpty()){

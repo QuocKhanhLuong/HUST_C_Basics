@@ -2,104 +2,160 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct Node {
-    char customerID[6];
-    char customerName[31];
-    float amount;
-    struct Node *next;
-}Node;
+// Định nghĩa cấu trúc Customer
+typedef struct Customer {
+    char id[8];     // Mã khách hàng
+    char name[21];  // Tên khách hàng
+    char level[7];  // Hạng khách hàng ("VIP", "GOLD", "SILVER")
+    struct Customer *next;
+} Customer;
 
-Node *front = NULL, *rear = NULL;
+Customer *head = NULL, *tail = NULL;
 
-Node *makeNode(char *x, char *y, float z){
-    Node *p = (Node*)malloc(sizeof(Node));
-    strcpy(p->customerID, x);
-    strcpy(p->customerName, y);
-    p->amount = z;
-    p->next = NULL;
-    return p;
+// Tạo hàng đợi rỗng
+void CreateQueue() {
+    head = NULL;
+    tail = NULL;
 }
 
-void createQueue(){
-    Node *front = NULL;
-    Node *rear = NULL;
+// Kiểm tra hàng đợi rỗng
+int isEmpty() {
+    return head == NULL;
 }
 
-int queueEmpty(){
-    return front == NULL && rear == NULL;
-}
+// Thêm khách hàng vào hàng đợi
+void Insert(const char *id, const char *name, const char *level) {
+    // Tạo một khách hàng mới
+    Customer *newCustomer = (Customer *)malloc(sizeof(Customer));
+    if (!newCustomer) {
+        printf("Memory allocation failed.\n");
+        return;
+    }
+    strcpy(newCustomer->id, id);
+    strcpy(newCustomer->name, name);
+    strcpy(newCustomer->level, level);
+    newCustomer->next = NULL;
 
-void enqueue(char *customerID, char *customerName, float amount){
-    Node *p = makeNode(customerID, customerName, amount);
-    if(queueEmpty()){
-        front = p;
-        rear = p;
+    // Thêm vào cuối hàng đợi
+    if (isEmpty()) {
+        head = newCustomer;
+        tail = newCustomer;
     } else {
-        rear->next = p;
-        rear = p;
+        tail->next = newCustomer;
+        tail = newCustomer;
     }
 }
 
-void dequeue(){
-    if (front == NULL) {
+// In toàn bộ hàng đợi
+void Print() {
+    if (isEmpty()) {
+        printf("EMPTY\n");
         return;
     }
-    Node *tmp = front;
-    printf("Dequeued: %s %s %.2f\n", front->customerID, front->customerName, front->amount);
-    front = front->next;
-    if (front == NULL) { // Nếu hàng đợi trống
-        rear = NULL;
-    }
-    free(tmp);
-}
-
-void peek(){
-    if(queueEmpty()) 
-        return;
-    printf("%s %s %.2f\n", front->customerID, front->customerName, front->amount);
-}
-
-void print(){
-    if(queueEmpty()) 
-        return;
-    Node *tmp = front;
-    while(tmp != NULL){
-        printf("Thong tin hanh khach: \n");
-        printf("%s %s %.2f\n", tmp->customerID, tmp->customerName, tmp->amount);
-        tmp = tmp->next;
+    Customer *current = head;
+    while (current != NULL) {
+        printf("%s %s %s\n", current->id, current->name, current->level);
+        current = current->next;
     }
 }
 
-void clearQueue(){
-    while(!queueEmpty()){
-        Node *tmp = front;
-        front = front->next;
-        if(front == NULL)
-            rear = NULL;
-        free(tmp);    
+// Loại bỏ tất cả khách hàng hạng "VIP"
+void Vip() {
+    while (head != NULL && strcmp(head->level, "VIP") == 0) {
+        Customer *temp = head;
+        head = head->next;
+        free(temp);
     }
-}
 
-int main(){
-    char cmd[20];
-    createQueue();
-    while(1){
-        scanf("%s", cmd);
-        if(strcmp(cmd, "#") == 0){
-            break;
-        } else if(strcmp(cmd,"Enqueue") == 0){
-            char customerID[6], customerName[31];
-            float amount;
-            scanf("%s %s %f", customerID, customerName, &amount);
-            enqueue(customerID, customerName, amount);
-        } else if(strcmp(cmd,"Dequeue") == 0){
-            dequeue();
-        } else if(strcmp(cmd,"Peek") == 0){
-            peek();
-        } else if(strcmp(cmd,"Print") == 0){
-            print();
+    Customer *current = head;
+    while (current != NULL && current->next != NULL) {
+        if (strcmp(current->next->level, "VIP") == 0) {
+            Customer *temp = current->next;
+            current->next = current->next->next;
+            free(temp);
+        } else {
+            current = current->next;
         }
     }
-    clearQueue();
+
+    if (head == NULL) {
+        tail = NULL;
+    }
+}
+
+// Đếm số lượng khách hạng "GOLD"
+void Gold() {
+    int count = 0;
+    Customer *current = head;
+    while (current != NULL) {
+        if (strcmp(current->level, "GOLD") == 0) {
+            count++;
+        }
+        current = current->next;
+    }
+
+    if (count == 0) {
+        printf("NO GOLD\n");
+    } else {
+        printf("%d\n", count);
+    }
+}
+
+// Phục vụ khách hàng đầu tiên trong hàng đợi
+void Serve() {
+    if (isEmpty()) {
+        printf("EMPTY\n");
+        return;
+    }
+    Customer *temp = head;
+    head = head->next;
+    if (head == NULL) {
+        tail = NULL;
+    }
+    free(temp);
+}
+
+// Giải phóng bộ nhớ của hàng đợi
+void FreeQueue() {
+    while (head != NULL) {
+        Customer *temp = head;
+        head = head->next;
+        free(temp);
+    }
+    tail = NULL;
+}
+
+int main() {
+    char command[100];
+    CreateQueue();
+
+    while (1) {
+        fgets(command, sizeof(command), stdin);
+        command[strcspn(command, "\n")] = '\0';
+
+        if (strcmp(command, "*") == 0) {
+            break;
+        }
+
+        if (strcmp(command, "CreateQueue") == 0) {
+            CreateQueue();
+        } else if (strcmp(command, "Print") == 0) {
+            Print();
+        } else if (strcmp(command, "Vip") == 0) {
+            Vip();
+        } else if (strcmp(command, "Gold") == 0) {
+            Gold();
+        } else if (strcmp(command, "Serve") == 0) {
+            Serve();
+        } else if (strncmp(command, "Insert", 6) == 0) {
+            char id[8], name[21], level[7];
+            sscanf(command + 7, "%s %s %s", id, name, level);
+            Insert(id, name, level);
+        } else {
+            printf("Invalid command.\n");
+        }
+    }
+
+    FreeQueue();
     return 0;
 }
